@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JJPieViewController">
+            <connections>
+                <outlet property="backButton" destination="1xU-cv-R6W" id="AuE-zY-jmg"/>
+                <outlet property="nextButton" destination="5hG-G4-6eR" id="L1r-h5-AmG"/>
+                <outlet property="pieChart" destination="Udr-fz-7OC" id="UP3-Wb-f6h"/>
+                <outlet property="selectBackView" destination="FXn-Ov-itu" id="H2v-Q5-mlv"/>
+                <outlet property="showView" destination="7ym-Hj-Upn" id="0zF-ud-HPR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-G4-6eR">
+                    <rect key="frame" x="348" y="74" width="56" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="VgF-dj-RQq"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="7" minY="7" maxX="10" maxY="7"/>
+                    <state key="normal" title="Button" image="next">
+                        <color key="titleColor" red="0.59849510319999999" green="1" blue="0.31480771569999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="tFi-9y-hRN"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ym-Hj-Upn">
+                    <rect key="frame" x="10" y="124" width="394" height="548"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udr-fz-7OC" customClass="PNPieChart">
+                            <rect key="frame" x="59" y="90" width="315" height="329"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.41960784313725491" green="0.79607843137254897" blue="0.77254901960784317" alpha="0.28841594827586209" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Udr-fz-7OC" firstAttribute="height" secondItem="7ym-Hj-Upn" secondAttribute="height" multiplier="0.6" id="MHm-yu-f1P"/>
+                        <constraint firstAttribute="trailing" secondItem="Udr-fz-7OC" secondAttribute="trailing" constant="20" id="Wx4-4f-67f"/>
+                        <constraint firstItem="Udr-fz-7OC" firstAttribute="width" secondItem="7ym-Hj-Upn" secondAttribute="width" multiplier="0.8" id="jRq-cY-tFW"/>
+                        <constraint firstItem="Udr-fz-7OC" firstAttribute="top" secondItem="7ym-Hj-Upn" secondAttribute="top" constant="90" id="jrL-WJ-Lw0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXn-Ov-itu">
+                    <rect key="frame" x="66" y="74" width="282" height="45"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-cv-R6W">
+                    <rect key="frame" x="10" y="74" width="56" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="G9w-Ie-GOo"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="10" minY="7" maxX="7" maxY="7"/>
+                    <state key="normal" title="Button" image="back">
+                        <color key="titleColor" red="0.59849510321092392" green="1" blue="0.31480771569364641" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="8Og-hv-hsN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FXn-Ov-itu" firstAttribute="width" secondItem="1xU-cv-R6W" secondAttribute="width" multiplier="5" id="2Db-BW-RcG"/>
+                <constraint firstItem="FXn-Ov-itu" firstAttribute="height" secondItem="1xU-cv-R6W" secondAttribute="height" id="9RP-EW-2BV"/>
+                <constraint firstItem="FXn-Ov-itu" firstAttribute="top" secondItem="1xU-cv-R6W" secondAttribute="top" id="Alb-Y6-pTL"/>
+                <constraint firstItem="7ym-Hj-Upn" firstAttribute="top" secondItem="FXn-Ov-itu" secondAttribute="bottom" constant="5" id="M5D-Fk-2Y9"/>
+                <constraint firstItem="5hG-G4-6eR" firstAttribute="leading" secondItem="FXn-Ov-itu" secondAttribute="trailing" id="SEe-V4-hz1"/>
+                <constraint firstAttribute="bottom" secondItem="7ym-Hj-Upn" secondAttribute="bottom" constant="64" id="Tqc-TL-aUu"/>
+                <constraint firstItem="7ym-Hj-Upn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dby-iV-yqL"/>
+                <constraint firstItem="FXn-Ov-itu" firstAttribute="leading" secondItem="1xU-cv-R6W" secondAttribute="trailing" id="koi-RP-tC0"/>
+                <constraint firstItem="5hG-G4-6eR" firstAttribute="width" secondItem="1xU-cv-R6W" secondAttribute="width" id="qfg-LM-RSw"/>
+                <constraint firstAttribute="trailing" secondItem="5hG-G4-6eR" secondAttribute="trailing" constant="10" id="rH9-Nx-gff"/>
+                <constraint firstItem="1xU-cv-R6W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="sFC-aC-Que"/>
+                <constraint firstItem="5hG-G4-6eR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="t0Y-79-6or"/>
+                <constraint firstAttribute="trailing" secondItem="7ym-Hj-Upn" secondAttribute="trailing" constant="10" id="tNk-xc-M13"/>
+                <constraint firstItem="1xU-cv-R6W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="xg9-km-BOx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="189" y="408"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="64" height="64"/>
+        <image name="next" width="64" height="64"/>
+    </resources>
+</document>

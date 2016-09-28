@@ -1,0 +1,63 @@
+//
+//  PublicHeader.pch
+//  ShreddedBread
+//
+//  Created by 小超人 on 16/8/14.
+//  Copyright © 2016年 云之君兮鹏. All rights reserved.
+//
+/**
+ *  这里只引用一些用的非常多的 宏 或者  基础类目方便在各个地方使用
+ */
+
+#ifndef PublicHeader_pch
+#define PublicHeader_pch
+
+// 类目的头文件
+#import "UIBarButtonItem+CreatItme.h"
+#import "UIView+CreatView.h"
+#import "UIViewController+AlertVc.h"
+#import "NSString+formatterout.h"
+#import "NSDate+getWeekDay.h"
+
+
+// 屏幕的宽和高
+#define jjScreenWidth [UIScreen mainScreen].bounds.size.width
+#define jjcreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+// 网络相关
+#import <AFNetworking.h>
+#import "JJNetWorkRequst.h"
+
+//Block
+#define WEAK_SELF(weakSelf)  __weak __typeof(&*self)weakSelf = self; 
+
+// 用到的宏
+#define DAY_S 60*60*24
+
+// 心情
+#define MOOD_Happy (@"开心")
+#define MOOD_Normal (@"一般")
+#define MOOD_Sad (@"难过")
+#define MOOD_Null (@"空")
+// 标记
+#define TAG_Important (@"十万火急")
+#define TAG_Star (@"星星")
+#define TAG_Heihei (@"嘿嘿嘿")
+#define TAG_Dayima (@"大姨妈")
+
+#import "Color_marco.h"
+
+
+
+// 重写输入方法
+#ifndef DEBUG
+#define PPLog(...)  NSLog(__VA_ARGS__)
+#else
+#define PPLog(...)  NSLog(__VA_ARGS__)
+#endif
+
+
+
+
+#endif /* PublicHeader_pch */

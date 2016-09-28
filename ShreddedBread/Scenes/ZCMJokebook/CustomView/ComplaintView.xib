@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ComplaintView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGa-bD-rVN">
+                    <rect key="frame" x="185" y="60" width="230" height="403"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投诉建议！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-Vh-BgG">
+                    <rect key="frame" x="225" y="60" width="150" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="4Bi-AO-UU4"/>
+                        <constraint firstAttribute="width" constant="150" id="Tjd-tV-AiW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     亲爱的用户您好，使用过程中有什么投诉建议可以在此反馈（点击下方输入文字）！劳烦您留下联系方式便于我们为您服务，尽量将问题写的清楚简明！我们将在第一时间给您处理！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuR-44-gqv">
+                    <rect key="frame" x="185" y="128" width="230" height="150"/>
+                    <color key="backgroundColor" red="0.80392156859999997" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="aFo-su-Ver"/>
+                        <constraint firstAttribute="height" constant="150" id="n7k-UZ-THK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-JO-cjx">
+                    <rect key="frame" x="185" y="283" width="230" height="150"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SK-5b-RUD">
+                    <rect key="frame" x="205" y="433" width="30" height="30"/>
+                    <state key="normal" title="发送"/>
+                    <connections>
+                        <action selector="sendAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="jd3-AT-GKI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thY-Vo-4hd">
+                    <rect key="frame" x="365" y="433" width="30" height="30"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="JVp-m8-vg1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4SK-5b-RUD" firstAttribute="leading" secondItem="V4E-JO-cjx" secondAttribute="leading" constant="20" id="6ap-c8-NjR"/>
+                <constraint firstItem="4SK-5b-RUD" firstAttribute="top" secondItem="V4E-JO-cjx" secondAttribute="bottom" id="BBy-Ig-FDs"/>
+                <constraint firstItem="thY-Vo-4hd" firstAttribute="trailing" secondItem="V4E-JO-cjx" secondAttribute="trailing" constant="-20" id="JRc-PR-HWG"/>
+                <constraint firstItem="xGa-bD-rVN" firstAttribute="trailing" secondItem="V4E-JO-cjx" secondAttribute="trailing" id="L6K-sL-bHd"/>
+                <constraint firstItem="thY-Vo-4hd" firstAttribute="top" secondItem="V4E-JO-cjx" secondAttribute="bottom" id="Mvr-xt-1hv"/>
+                <constraint firstItem="V4E-JO-cjx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NXg-2z-XaC"/>
+                <constraint firstItem="HDD-Vh-BgG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OsT-z9-VFf"/>
+                <constraint firstItem="wuR-44-gqv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PL0-cf-UAN"/>
+                <constraint firstItem="wuR-44-gqv" firstAttribute="top" secondItem="HDD-Vh-BgG" secondAttribute="bottom" constant="5" id="W90-zR-p1n"/>
+                <constraint firstItem="V4E-JO-cjx" firstAttribute="height" secondItem="wuR-44-gqv" secondAttribute="height" id="YPz-Tj-31E"/>
+                <constraint firstItem="xGa-bD-rVN" firstAttribute="leading" secondItem="V4E-JO-cjx" secondAttribute="leading" id="Zs3-3z-TnF"/>
+                <constraint firstItem="wuR-44-gqv" firstAttribute="top" secondItem="HDD-Vh-BgG" secondAttribute="bottom" constant="2" id="gIa-0F-4E7"/>
+                <constraint firstItem="wuR-44-gqv" firstAttribute="top" secondItem="HDD-Vh-BgG" secondAttribute="bottom" constant="2" id="gp7-Gp-yLU"/>
+                <constraint firstItem="V4E-JO-cjx" firstAttribute="width" secondItem="wuR-44-gqv" secondAttribute="width" id="kiy-FH-XOG"/>
+                <constraint firstItem="xGa-bD-rVN" firstAttribute="bottom" secondItem="4SK-5b-RUD" secondAttribute="bottom" id="pWS-NF-AiL"/>
+                <constraint firstItem="xGa-bD-rVN" firstAttribute="top" secondItem="HDD-Vh-BgG" secondAttribute="top" id="s1U-7e-NGg"/>
+                <constraint firstItem="HDD-Vh-BgG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="sdh-Et-5xh"/>
+                <constraint firstItem="V4E-JO-cjx" firstAttribute="top" secondItem="wuR-44-gqv" secondAttribute="bottom" constant="5" id="uKs-X4-cgo"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="W90-zR-p1n"/>
+                    <exclude reference="gp7-Gp-yLU"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="520" y="377"/>
+        </view>
+    </objects>
+</document>

@@ -17,3 +17,5 @@
 - 基础动画结合 Layer 层的使用； 
 - 使用UIBezierPath实现柱状图和折线图，饼状图；
 - MVC、KVO 设计模式的运用
+
+![展示界面](http://oeijqgdj5.bkt.clouddn.com/%E7%BB%9F%E8%AE%A1.png)
